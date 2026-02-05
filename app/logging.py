@@ -1,6 +1,3 @@
-
-
-
 import json
 import logging
 from .settings import settings
@@ -16,13 +13,13 @@ if not logger.handlers:
 logger.setLevel(settings.LOG_LEVEL)
 
 def log_request(*, 
-                requrest_id:str, 
+                request_id:str, 
                 method:str, 
                 path:str, 
                 status_code:int,
                 latency_ms:float):
     payload = {
-        "requrest_id": requrest_id, 
+        "requrest_id": request_id, 
         "method": method, 
         "path": path, 
         "status_code": status_code,
